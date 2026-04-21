@@ -7,7 +7,11 @@
 import time
 #Imports the random class to generate random numbers
 import random
+#Imports the string class to check for special characters in the user's name
+import string
 
+#This is a variable that stores the name of the creator of the program
+creator = "Anirudh M.R"
 #Asks the user to enter their name
 print("Kindly enter your name:")
 #Stores the user's name in a variable called name
@@ -35,7 +39,7 @@ if name.strip() == "":
     name = "Bug Man"
     #In case the user enters a name, it will welcome the user to the Dragon Realm
 else:
-    print(f"Welcome to the Dragon Realm {name}\n This program is created by Anirudh M.R!")
+    print(f"Welcome to the Dragon Realm {name}!")
     time.sleep(1.5)
 
 #Chapter 2: The Adventure Begins (Intoduction)
@@ -149,7 +153,7 @@ def check_cave(chosen_cave):
 
         #Path 1: If the user chose the aggresive cave and the name is bug man it will print a special message and end the game 
         if name == "Bug Man":
-                print(f"Psych you called (chose) the wrong number (cave) on the Dragon phone (realm)...")
+                print(f"Psych you called (chose) the wrong number (cave) on the Dragon phone (realm) so the dragon...")
                 time.sleep(1.5)
                 print("First roasted you...")
                 time.sleep(1.5)
@@ -212,7 +216,7 @@ while play_again == "yes" or play_again == "y":
             time.sleep(1.5)
             print("You have access to the best bug training facilities...")
             time.sleep(1.5)
-            print("Yuji Itadori personally checks your health...")
+            print("Yuji Itadori & Todo Itadori personally checks your health...")
             time.sleep(1.5)
             print("The jujitsu socerres personally check you so that you don't get rage baited...")
             time.sleep(1.5)
@@ -223,9 +227,19 @@ while play_again == "yes" or play_again == "y":
             print("Your aura is near infinte...")
             time.sleep(1.5)
             print("You should enjoy your stay, almighty powerfull Bug Man who has infinte aura.")
+            time.sleep(1.5)
+            print("Restarting the game in 3...")
+            time.sleep(1)
+            print("Restarting the game in 2...")
+            time.sleep(1)
+            print("Restarting the game in 1...")
+            time.sleep(1)
+            print(f"Welcome back to the Dragon Realm! {name}!")
+            #Converting play_again to yes to restart the game else it will end the game
+            play_again = "yes"
 
         #Path 2: If the user name is a special character, then the below message will be printed and the game will end
-        elif any(char in name for char in [".", "!", "?", ";", ":"]):
+        elif any(char in string.punctuation for char in name):
             print("Since you did not enter a proper input the dragon realm is going to collapse...")
             time.sleep(1.5)
             print("But wait a minute...")
@@ -248,7 +262,7 @@ while play_again == "yes" or play_again == "y":
             print("Dragon Realm collpsing in 1.")
             time.sleep(1.5)
             print("Dragon Realm has collpsed\n Thank you for playing the Dragon Realm\n We hope you enjoyed the adventure and the unique endings based on your choices and name")
-            print("Program created by Anirudh M.R")
+            print(f"Program created by {creator}")
             break
 
         #Path 3: If the user name is a number, then the below message will be printed and the game will end
@@ -261,13 +275,13 @@ while play_again == "yes" or play_again == "y":
             time.sleep(1.5)
             print("These are the coordinates to reach the point of infinity.")
             time.sleep(1.5)
-            print("The true Muzan Jackson.")
+            print("The true Kibutsuji Yoriichi.")
             time.sleep(1.5)
             print("In his prime he was the most powerful being in the universe and he still is...")
             time.sleep(1.5)
-            print("The master at moonwalking along with Kokushibo and Yoriichi")
+            print("The master at Moonwalking & Sunwalking")
             time.sleep(1.5)
-            print("The Dragon Realm will remember you as the true Muzan Jackson")
+            print("The Dragon Realm will remember you as the true Kibutsuji Yoriichi")
             time.sleep(1)
             print(f"Final logged hero: {name}")
             time.sleep(1)
@@ -280,7 +294,7 @@ while play_again == "yes" or play_again == "y":
             print("Dragon Realm collpsing in 1.")
             time.sleep(1.5)
             print("Dragon Realm has collpsed\n Thank you for playing the Dragon Realm\n We hope you enjoyed the adventure and the unique endings based on your choices and name")
-            print("Program created by Anirudh M.R")
+            print(f"Program created by {creator}")
             break
 
         #Path 4: If the user name is normal, then the below message will be printed and the game will end
@@ -295,7 +309,7 @@ while play_again == "yes" or play_again == "y":
             time.sleep(1)
             print("Dragon Realm has collpsed")
             print("Thank you for playing the Dragon Realm\n We hope you enjoyed the adventure and the unique endings based on your choices")
-            print("Program created by Anirudh M.R")
+            print(f"Program created by {creator}")
             break
 
         #Type 2: If the user followed the rules and entered no, it will print a message according to the name of the user and end the game
@@ -317,7 +331,7 @@ while play_again == "yes" or play_again == "y":
             time.sleep(1.5)
             print("You have access to the best bug training facilities...")
             time.sleep(1.5)
-            print("Yuji Itadori personally checks your health...")
+            print("Yuji Itadori & Todo Itadori personally checks your health...")
             time.sleep(1.5)
             print("The jujitsu socerres personally check you so that you don't get rage baited...")
             time.sleep(1.5)
@@ -340,11 +354,11 @@ while play_again == "yes" or play_again == "y":
             print("Dragon Realm closing in 1.")
             time.sleep(1)
             print("Dragon Realm has closed successfully\n Thank you for playing the Dragon Realm\n We hope you enjoyed the adventure and the unique endings based on your choices and name.")
-            print("Program created by Anirudh M.R")
+            print(f"Program created by {creator}")
             break
 
         #Path 2: If the user is a special character and enters no, it will print a special message and end the game
-        elif any(char in name for char in [".", "!", "?", ";", ":"]):
+        elif any(char in string.punctuation for char in name):
             print("Wait a minute...")
             time.sleep(1.5)
             print(f"This is not a normal special character {name}.")
@@ -366,24 +380,22 @@ while play_again == "yes" or play_again == "y":
             print("Dragon Realm closing in 1.")
             time.sleep(1.5)
             print("Dragon Realm has closed successfully\n Thank you for playing the Dragon Realm\n We hope you enjoyed the adventure and the unique endings based on your choices and name..")
-            print("Program created by Anirudh M.R")
+            print(f"Program created by {creator}")
             break
 
         #Path 3: If the user is name is a number and enters no, it will print a special message and end the game
         elif any(char.isdigit() for char in name):
-            print("Since you did not enter a proper input the dragon realm is going to collapse...")
-            time.sleep(1.5)
             print("But wait a minute...")
             time.sleep(1.5)
             print(f"This is not a normal name {name}.")
             time.sleep(1.5)
             print("These are the coordinates to reach the point of infinity.")
             time.sleep(1.5)
-            print("The true Muzan Jackson.")
+            print("The true Kibutsuji Yoriichi.")
             time.sleep(1.5)
             print("In his prime he was the most powerful being in the universe and he still is...")
             time.sleep(1.5)
-            print("The master at moonwalking along with Kokushibo and Yoriichi")
+            print("The master at Moonwalking & Sunwalking")
             time.sleep(1.5)
             print("The Dragon Realm will remember you as the true Muzan Jackson")
             time.sleep(1.5)
@@ -398,7 +410,7 @@ while play_again == "yes" or play_again == "y":
             print("Dragon Realm closing in 1.")
             time.sleep(1.5)
             print("Dragon Realm has closed successfully.\n Thank you for playing the Dragon Realm\n We hope you enjoyed the adventure and the unique endings based on your choices and name.")
-            print("Program created by Anirudh M.R")
+            print(f"Program created by {creator}")
             break
 
         #Path 4: If the user entered and entered no it will print a message and end the game
@@ -416,7 +428,7 @@ while play_again == "yes" or play_again == "y":
             print("Dragon Realm closing in 1.")
             time.sleep(1)
             print("Dragon Realm has closed successfully\n Thank you for playing the Dragon Realm\n We hope you enjoyed the adventure and the unique endings based on your choices and name.")
-            print("Program created by Anirudh M.R")
+            print(f"Program created by {creator}")
             break
     #Type 3: If the user followed the rules and entered yes, it will print a message according to the characters name and restart the game
     elif play_again == "yes" or play_again == "y":
@@ -437,7 +449,7 @@ while play_again == "yes" or play_again == "y":
             time.sleep(1.5)
             print("You have access to the best bug training facilities...")
             time.sleep(1.5)
-            print("Yuji Itadori personally checks your health...")
+            print("Yuji Itadori & Todo Itadori personally checks your health...")
             time.sleep(1.5)
             print("The jujitsu socerres personally check you so that you don't get rage baited...")
             time.sleep(1.5)
@@ -458,7 +470,7 @@ while play_again == "yes" or play_again == "y":
             print(f"Welcome back to the Dragon Realm! {name}!")
 
         #Path 2: If the user is a special character and enters yes, it will print a special message and restart the game
-        elif any(char in name for char in [".", "!", "?", ";", ":"]):
+        elif any(char in string.punctuation for char in name):
             print("Wait a minute...")
             time.sleep(1.5)
             print(f"This is not a normal special character {name}.")
@@ -485,11 +497,11 @@ while play_again == "yes" or play_again == "y":
             time.sleep(1.5)
             print("These are the coordinates to reach the point of infinity.")
             time.sleep(1.5)
-            print("The true Muzan Jackson.")
+            print("The true Kibutsuji Yoriichi.")
             time.sleep(1.5)
             print("In his prime he was the most powerful being in the universe and he still is...")
             time.sleep(1.5)
-            print("The master at moonwalking along with Kokushibo and Yoriichi")
+            print("The master at Moonwalking & Sunwalking")
             time.sleep(1.5)
             print(f"A true legend like you should not be leaving the Dragon Realm {name}...")
             time.sleep(1.5)
